@@ -1,0 +1,9 @@
+skin_name : 플레인pc
+skin_code : 0761plain_pc
+skin_version : 2.0
+skin_upload_date : 2021-05-21
+skin_device : front
+skin_country : kr_global
+apply_solution : 고도몰5
+worker : (주)얼라이브즈 - 전체관리자
+notice1 : 압축화일(zip)로 업로드한 스킨임

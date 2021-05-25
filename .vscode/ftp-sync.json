@@ -1,0 +1,26 @@
+{
+    "remotePath": "/data/skin/front/0761plain_pc/",
+    "host": "alives.co.kr",
+    "username": "alives007",
+    "password": "wemake2021",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": { 
+        "uploadOnSave": true,
+        "extensionsToInclude": [".php",".html"],
+        "path": ""
+    }
+}

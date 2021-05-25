@@ -1,0 +1,158 @@
+{*** 상단 기본파일 | main/index.php ***}
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{=setBrowserCache('../../css/swiper.min.css')}">
+
+<script type="text/javascript" src="../../js/mo_js/swiper.min.js"></script><!-- morenvy script -->
+<script type="text/javascript" src="../../js/mo_js/mcommon.js"></script><!-- morenvy script -->
+
+
+<div id="header">
+	<div class="header_sec01">
+		<div class="inner">
+			<ul class="sec01_left fleft">
+				<!-- 상단 어바웃 텍스트 수정하는곳 -->
+				<li><a href="../service/company.php">ABOUT PLAIIIN</a></li>
+				<li><a href="/service/index.php">고객센터</a></li>
+				<!-- 상단 글로벌 버튼 -->
+				<li class="sec01_global">
+				<span class="ico_kor"><img src="../../img/mimg/ico_kor.gif"></span><a href="#"> 한국어</a>
+					<div class="glo_sub">
+						<a href="#"><img src="../../img/mimg/ico_eng.gif"> 영어</a>
+						<a href="#"><img src="../../img/mimg/ico_chn.gif"> 중국어</a>
+						<a href="#"><img src="../../img/mimg/ico_jpn.gif"> 일본어</a>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="sec01_right fright">
+				<li>
+					<!-- 검색창 -->
+					<div class="header_search_cont">
+						<!-- 검색 폼 -->
+						{=includeWidget('proc/_header_search.html')}
+						<!-- 검색 폼 -->
+					</div><!-- //header_search_cont -->
+				</li>
+
+				<li class="top_pop">
+					<!-- 인기검색어 -->
+					<a href="#" class="first"><span>1.</span>퍼펙트후디</a>
+					<div class="top_pop_sub">
+						<a href="#"><span>2.</span> 풀오버후드</a>
+						<a href="#"><span>3.</span> 브랜드데이</a>
+						<a href="#"><span>4.</span> 에슬레저룩</a>
+						<a href="#"><span>5.</span> 핏이다른팬츠</a>
+					</div>
+				</li>
+
+				<li class="top_login">
+					<ul>
+						<!--{ ? gd_is_login() === false }-->
+						<li><a href="../member/login.php">로그인</a></li>
+						<li class="mid">/</li>
+						<li><a href="../member/join_method.php" class="black">회원가입</a></li>
+						<li class="mid">/</li>
+						<li><a href="../mypage/order_list.php" class="black">주문조회</a></li>
+						<!--{ : }-->
+						<li><a href="../member/logout.php?returnUrl={=logoutReturnUrl}">로그아웃</a></li>
+						<li class="mid">/</li>
+						<li><a href="../mypage/my_page_password.php" class="black">회원정보</a></li>
+						<li class="mid">/</li>
+						<li><a href="../mypage/order_list.php" class="black">주문조회</a></li>
+						<!--{ / }-->
+					</ul>
+				</li>
+			</ul>
+		</div><!-- //inner -->
+	</div><!-- //header_sec01 -->
+
+
+	<div class="header_sec02"  id="comment_top">
+		<div class="inner">
+			<!-- 상단로고 -->
+			<div class="top_logo"><a href="/"><img src="../../img/mimg/top_logo.gif"></a></div>
+
+			<!-- 일반 카테고리 --> 
+			<div class="top_cate">
+				<div class="gnb">{=includeWidget('proc/category_side', 'type', 'top','cateType','cate','menuType','all')}</div>
+
+				<!-- 일반 수동 추가 카테고리 --> 
+				<div class="top_add">
+					<ul>
+						<li class="top_cate_space"><a href="#">EXCLUSIVE</a><li>
+						<li><a href="#">EVENT</a><li>
+						<li><a href="#">STORE</a><li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 우측 아이콘 메뉴 -->
+			<div class="top_comm">
+				<ul>
+					<li><a href="../mypage/my_page_password.php"><img src="../../img/mimg/top_icon01.gif"></a></li>
+					<li class="top_cart"><a href="/order/cart.php"><span>0</span><img src="../../img/mimg/top_icon02.gif"></a></li>
+					<li><a href="#none" onclick="openNav()"><img src="../../img/mimg/top_icon03.gif"></a></li>
+				</ul>
+			</div> 
+		</div><!-- //inner -->
+	</div><!-- //header_sec02 -->
+
+
+	<!-- 퀵슬라이드메뉴 -->
+	<div id="mobile_allcate" class="widepc">
+		<div class="allcate_inner">
+			<!-- 로고 -->
+			<div class="top_logo fleft"><a href="/"><img src="../../img/mimg/top_logo.gif"></a></div>
+
+			<div class="nav_t01 cboth">더많은 쇼핑 구매 혜택을 받으시려면<br>회원 로그인이 필요합니다.</div>
+			<div class="nav_t02 cboth">
+				<ul>
+					<!--{ ? gd_is_login() === false }-->
+					<li class="join"><a href="../member/join_method.phpz" class="black">회원가입</a></li>
+					<li><a href="../member/login.php">로그인</a></li>
+					<!--{ : }-->
+					<li class="join"><a href="../mypage/my_page_password.php" class="black">회원정보</a></li>
+					<li><a href="../member/logout.php?returnUrl={=logoutReturnUrl}">로그아웃</a></li>
+					<!--{ / }-->
+				</ul>
+			</div><!-- //nav_t02 -->
+
+			<div class="nav_t03 cboth">
+				<ul>
+					<li><a href="/member/find_id.php">아이디 찾기</a></li>
+					<li>/</li>
+					<li><a href="/member/find_password.php">비밀번호 찾기</a></li>
+					<li>/</li>
+					<li><a href="/service/event.php">멤버십 혜택</a></li>
+					<li>/</li>
+					<li><a href="/service/index.php">고객센터111</a></li>
+				</ul>
+			</div><!-- //nav_t03 -->
+				
+			<!-- 카테고리 자동출력 -->
+			<ul class="nav_tabs cboth">
+				<li class="active" rel="nav_tab1">카테고리</li>
+				<li rel="nav_tab2">커뮤니티</li>
+			</ul>
+			<div class="cboth nav_tab_container">
+				<div id="nav_tab1" class="nav_tab_content">
+					{=includeWidget('proc/category_side', 'type', 'tree','cateType','cate','menuType','all')}
+				</div>
+
+				<div id="nav_tab2" class="nav_tab_content">
+					<ul class="nav_cate cboth">
+						<li><a href="/board/list.php?bdId=notice">NOTICE</a></li>
+						<li><a href="/board/list.php?bdId=event">EVENT</a></li>
+						<li><a href="/board/list.php?bdId=goodsreview">REVIEW</a></li>
+						<li><a href="/board/list.php?bdId=goodsqa">Q&A</a></li>
+						<li><a href="/board/list.php?bdId=gallery">GALLERY</a></li>
+					</ul>
+				</div>
+			</div><!-- //nav_tab_container -->
+		</div><!-- //allcate_inner -->
+		<div class="mobile_allcate_Close"><a href="#none" onclick="closeNav()"><img src="../../img/mimg/slide/slidenav_close.gif" class="rotate"></a></div>
+	</div><!-- //mobile_allcate -->
+
+</div><!-- //header -->
+

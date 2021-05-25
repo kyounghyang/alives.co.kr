@@ -1,0 +1,21 @@
+{*** [위젯] 상단 검색 | proc/_header_search.html ***}
+<div class="top_search">
+    <form name="frmSearchTop" id="frmSearchTop" action="../goods/goods_search.php" method="get">
+        <!--{ ? adUrl }-->
+        <input type="hidden" name="adUrl" value="{adUrl}">
+        <!--{ / }-->
+        <fieldset>
+            <div class="top_search_cont">
+                <div class="top_text_cont">
+                    <input type="text" id="search_form" name="keyword" class="top_srarch_text" title="{adKeyword}"  placeholder="{adKeyword}" autocomplete="off">
+                    <input type="image" src="../img/mimg/top_search_btn.gif" id="btnSearchTop" class="btn_top_srarch" title="{=__('검색')}" value="{=__('검색')}" alt="{=__('검색')}">
+                </div>
+                <!-- //top_text_cont -->
+            </div>
+            <!-- //top_search_cont -->
+        </fieldset>
+    </form>
+</div>
+<!-- //top_search -->
+
+

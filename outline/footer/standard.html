@@ -1,0 +1,161 @@
+{*** 하단 기본타입 | main/index.php ***}
+
+<div class="footer">
+	<div class="cboth pdt50"></div>
+
+	<!-- 우측 퀵바 -->
+	<div id="right_quick">
+		<ul>
+			<!-- 카카오톡 아이콘 -->
+			<li><a href="#"><img src="../../img/mimg/q_r_kaka.png"></a></li>
+			<!-- 네이버톡 아이콘 -->
+			<li><a href="#"><img src="../../img/mimg/q_r_naver.png"></a></li>
+		</ul>
+		<div class="cboth icon_quick_plus is-open"><a href="#none"><img src="../../img/mimg/icon_quick_plus.png"></a></div>
+		<div class="cboth"><a href="#none" onclick="$('html,body').animate({scrollTop:0},'slow')"><img src="../../img/mimg/q_r_top.png"></a></div>
+		<div class="cboth"><a href="#none" onclick="$('html,body').animate({scrollTop:$(document).height()},'slow');"><img src="../../img/mimg/q_r_bt.png"></a></div>
+	</div><!-- //right_quick -->
+
+
+	<!-- 하단 로그인 -->
+	<div class="footer_log cboth">
+		<div class="ft_l_t01 cboth">아직 <strong>{=gMall.companyNm}</strong> 회원이 아니신가요?</div>
+		<div class="ft_l_t02 cboth">지금 회원가입하시면, 다양한 혜택과 함께 즐거운 쇼핑을 하실수 있습니다.</div>
+		<div class="ft_l_btn cboth">
+			<ul>
+				<li><a href="/member/join_agreement.php">회원가입</a></li>
+				<li><a href="/member/login.php">로그인</a></li>
+			</ul>
+		</div>
+	</div><!-- //footer_log -->
+
+
+	<!-- 하단 컨텐츠01 -->
+	<div class="footer_section01">
+		<!-- footer_section01 좌측 -->
+		<div class="footer_left">
+			<div class="ft_board">
+				<!-- 하단 NEWS / EVENT -->
+				<ul class="tabs cboth">
+					<li class="active" rel="tab1">NEWS</li>
+					<li rel="tab2">EVENT</li>
+				</ul>
+				<div class="cboth tab_container">
+					<div id="tab1" class="tab_content">
+						<span><a href="/board/list.php?&bdId=notice"><img src="../../img/mimg/ft_board_ar.gif"></a></span>
+						<ul class="ft_board_li cboth">
+							<!--{ @getArticles( 'notice' , 5 , 100 ) }-->
+							<li>
+								<a href="/board/view.php?bdId={.bdId}&sno={.sno}" alt="제목">{.subject}</a>
+								<!--{ / }-->
+							</li>
+						</ul>
+					</div>
+
+					<div id="tab2" class="tab_content">
+						<span><a href="/board/list.php?&bdId=event"><img src="../../img/mimg/ft_board_ar.gif"></a></span>
+						<ul class="ft_board_li cboth">
+							<!--{ @getArticles( 'event' , 5 , 100 ) }-->
+							<li>
+								<a href="/board/view.php?bdId={.bdId}&sno={.sno}" alt="제목">{.subject}</a>
+								<!--{ / }-->
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="ft_info01">
+				<!-- 하단 고객센터 전화번호 / 운영시간 -->
+				<div class="numb">1600.0000</div>
+				<div class="cs">
+					MON-FRI 10:00 ~20:00<br>
+					SAT / SUN / HOLIDAY 10:00 ~19:00<br>
+					<span>MORENVY@NAVER.COM</span>
+				</div>
+				<!-- 하단 고객센터 FAQ / 1:1문의 -->
+				<div class="faq_btn">
+					<ul>mypage/mypage_qa.html
+						<li><a href="/service/faq.php">FAQ</a></li>
+						<li><a href="/service/qa.php">1:1 문의</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="ft_info02">
+				<ul>
+					<!-- 하단 타이틀 01 -->
+					<li><a href="#">INSIDE PLAIIIN</a></li>
+					<!-- 하단 링크수정 01 -->
+					<li><a href="/service/company.php">ABOUT PLAIIIN</a></li>
+					<li><a href="#">EXCLUSIVE</a></li>
+					<li><a href="/board/list.php?bdId=notice">COMMUNITY</a></li>
+					<li><a href="#">OFFLINE STORE</a></li>
+					<li><a href="/mypage/index.php">MEMBERSHIP</a></li>
+				</ul>
+			</div>
+
+			<div class="ft_info02">
+				<ul>
+					<!-- 하단 타이틀 02 -->
+					<li><a href="#">SHOPPING QUICK</a></li>
+					<!-- 하단 링크수정 02 -->
+					<li><a href="../mypage/index.php">MY PAGE</a></li>
+					<li><a href="../mypage/order_list.php">ORDER</a></li>
+					<li><a href="../mypage/wish_list.php">WISH LIST</a></li>
+					<li><a href="../mypage/coupon.php">COUPON</a></li>
+				</ul>
+			</div>
+		</div><!-- //footer_left -->
+
+
+		<!-- footer_section01 우측 -->
+		<div class="footer_right">
+			<div class="ft_sns">
+				<!-- SNS 타이틀 -->
+				<div class="ft_sns_t">FOLLOW US</div>
+				<ul class="ft_sns_i">
+					<!-- SNS 링크수정 -->
+					<li><a href="#"><img src="../../img/mimg/ft_sns01.gif"></a></li>
+					<li><a href="#"><img src="../../img/mimg/ft_sns02.gif"></a></li>
+				</ul>
+			</div>
+		</div><!-- //footer_right -->
+
+	</div><!-- //footer_section01 -->
+
+
+	<!-- 하단 컨텐츠02 -->
+	<div class="footer_section02 cboth">
+		<div class="inner">
+			<!-- footer_section02 좌측 -->
+			<div class="footer_left">
+				<div class="ft_menu">
+					<ul>
+						<!-- 하단 회사소개 링크수정 -->
+						<li><a href="/">홈</a></li>
+						<li><a href="/service/company.php">회사소개</a></li>
+						<li><a href="/service/agreement.php">이용약관</a></li>
+						<li><a href="/service/private.php" class="privacy">개인정보처리방침</a></li>
+						<li><a href="/service/guide.php">이용안내</a></li>
+					</ul>
+				</div>
+
+				<!-- 하단 회사정보 -->
+				<div class="ft_copy cboth">
+					COMPANY : <span>{=gMall.companyNm}</span> <span>I</span> OWNER : <span>{=gMall.ceoNm}</span> <span>I</span> BUSINESS LICENSE : <span>{=gMall.businessNo}</span> <span>I</span> MAIL ORDER LICENSE : <span>{=gMall.onlineOrderSerial}</span> <br>
+					ADDRESS : <span>{=gMall.address} {=gMall.addressSub}</span> <span>I</span> CHIEF PRIVACY OFFICER :<span> {=gMall.privateNm} <a href="{=gMall.email}" class="btn_email">({=gMall.email})</a></span> <br>
+					CALL CENTER : <span>{=gMall.phone}</span> <span>I</span> FAX : <span>{=gMall.fax}</span><br><br>
+					&copy;{=gMall.mallDomain} ALL RIGHTS RESERVED. 호스팅제공 : 엔에이치엔고도(주). DESIGNED BY MORENVY.COM
+				</div>
+			</div>
+
+			<!-- footer_section02 우측 -->
+			<div class="footer_right">
+				<!-- 에스크로배너 -->
+				<a href="#"><img src="../../img/mimg/ft_escrow.gif"></a>
+			</div>
+	
+		</div><!-- //inner -->
+	</div><!-- //footer_section02 -->
+</div><!-- //footer -->
