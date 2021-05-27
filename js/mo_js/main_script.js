@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {	
 
-	/* morenvy.com ¸ŞÀÎ½½¶óÀÌµå */
+	/* morenvy.com ï¿½ï¿½ï¿½Î½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ */
 	var swiper0 = new Swiper('.swiper0', {
 		loop: true,
 		navigation: {
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
 	});
 
 
-	/* ºê·£µåÇÈ ½½¶óÀÌµå */
+	/* ï¿½ê·£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ */
 	var swiper1 = new Swiper('.swiper1', {
         centeredSlides: true,
 		slidesPerView: 'auto',
@@ -36,4 +36,38 @@ jQuery(document).ready(function() {
 		speed:700,
     });
 
+	
+	/* swiper02 : æäº¥é£˜ç¡…å‘ˆ */
+	var swiper2_txt = new Swiper('.swiper2_txt', {
+		spaceBetween:0,
+		slidesPerView: 1,
+		effect: 'fade',
+		loop:true,
+		loopedSlides: 10,
+	});
+	var swiper2 = new Swiper('.swiper2', {
+		slidesPerView: 'auto',
+		spaceBetween: 60,
+		loopedSlides:10,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination2',
+			clickable: true,			
+		},
+        autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		}, 
+		speed:1000,
+	});
+	swiper2.controller.control = swiper2_txt;
+	swiper2_txt.controller.control = swiper2;
+
+	jQuery('ul.m_tab01 li').click(function() {
+		var activeTab = jQuery(this).attr('data-tab');
+		jQuery('ul.m_tab01 li').removeClass('current');
+		jQuery('.tabcontent01').removeClass('current');
+		jQuery(this).addClass('current');
+		jQuery('#' + activeTab).addClass('current');
+	})
 });
