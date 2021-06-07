@@ -5,29 +5,24 @@
 <script type="text/javascript" src="../js/mo_js/main_script.js"></script><!-- morenvy script -->
 
 
-<!-- 3단 멀티팝업 -->
-<script type="text/javascript" src="../js/mo_js/main_pop01.js"></script><!-- morenvy script -->
+<!-- 3단 멀티팝업 
+<script type="text/javascript" src="../js/mo_js/main_pop01.js"></script>
 <div class="xans-mpopup">
 	<div class="mpopup mpopup1" id="mpopup1">
 		<div class="showarea">
 			<div class="swiper-container swiper_pop">
 				<div class="swiper-wrapper">
-					<!-- 3단 멀티배너 : 01 링크수정 -->
 					<div class="swiper-slide"><a href="#"><img src="../img/mimg/pop01.jpg"></a></div>
-					<!-- 3단 멀티배너 : 02 링크수정 -->
 					<div class="swiper-slide"><a href="#"><img src="../img/mimg/pop02.jpg"></a></div>
-					<!-- 3단 멀티배너 : 03 링크수정 -->
 					<div class="swiper-slide"><a href="#"><img src="../img/mimg/pop03.jpg"></a></div>
 				</div>
 				<ul class="swiper_p_text cboth">
-					<!-- 3단 멀티배너 : 탭 텍스트 -->
 					<li class="swiper_over">브랜드데이</li>
 					<li>가을컬렉션</li>
 					<li>1+1이벤트</li>
 				</ul>
 				<div class="swiper-pagination swiper-pagination-pop"></div>
 			</div>
-			<!-- //swiper_pop -->
 		</div>
 		<div class="todayopen">
 		<div class="closex"><span>닫기 X</span></div>
@@ -35,14 +30,13 @@
 		</div>
 	</div>
 </div>
+-->
 
-
-<!-- 원형 팝업 -->
-<script type="text/javascript" src="../js/mo_js/main_pop02.js"></script><!-- morenvy script -->
+<!-- 원형 팝업 
+<script type="text/javascript" src="../js/mo_js/main_pop02.js"></script>
 <div class="xans-mpopup2">
 	<div class="mpopup2 mpopup2" id="mpopup2">
 		<div class="showarea">
-		<!-- 원형팝업 : 링크수정 -->
 		<a href="#"><img src="../img/mimg/circle_pop.png"></a>
 		</div>
 		<div class="todayopen">
@@ -51,7 +45,7 @@
 		</div>
 	</div>
 </div>
-
+-->
 
 <!-- 메인이미지 슬라이드 -->
 <div class="swiper-container swiper0">
@@ -87,35 +81,16 @@
 	{=includeFile('main/main_story.html')}
 
 
-	{=includeFile('main/main_tab_slide.html')}
+	{=includeFile('main/main_category_best.html')}
 
 
+	{=includeFile('main/main_it_item.html')}
+	
+	{=includeFile('main/main_real_review.html')}
+
+	{=includeFile('main/main_trend_pick.html')}
 
 
-
-	<!-- TREND KEYWORD : 타이틀 -->
-	<div class="pro_title_area">
-		<div class="pro_title01">TREND KEYWORD</div>
-		<div class="pro_title02">타이틀 아래에 들어갈 홍보 문구를 넣어주세요.</div>
-	</div>
-	<!-- TREND KEYWORD : 영역 -->
-	<div class="trend_keyword cboth">
-		<!-- 1단 -->
-		<ul>
-			<li><a href="#">#퍼펙트후디</a></li>
-			<li><a href="#">#풀오버후드</a></li>
-			<li><a href="#">#TNA</a></li>
-			<li><a href="#">#브랜드데이</a></li>
-			<li><a href="#">#에슬레저룩</a></li>
-		</ul>
-		<!-- 2단 -->
-		<ul class="cboth pdt20">
-			<li><a href="#">#시원한린넨</a></li>
-			<li><a href="#">#블라우스&셔츠</a></li>
-			<li><a href="#">#스트라이프</a></li>
-			<li><a href="#">#핏이다른팬츠</a></li>
-		</ul>
-	</div>
 
 
 	<div class="cboth pdt80"></div>
@@ -157,64 +132,6 @@
 	<div class="cboth pdt80"></div>
 
 
-	<!-- 메인상품타이틀 : THE BEST 모음 -->
-	<div class="pro_title_area">
-		<div class="pro_title01">THE BEST</div>
-		<div class="pro_title02">상품리스트 타이틀 아래에 들어갈 홍보 문구를 넣어주세요</div>
-	</div>
-	<!-- 메인상품타이틀 : THE BEST 모음 -->
-	<div class="main_pro cboth">
-		{=includeWidget('goods/_goods_display_main.html','sno','2')}
-	</div>
-
-
-	<div class="cboth pdt30"></div>
-
-
-	<!-- BRAND PICK  : 슬라이드영역 -->
-	<div class="pro_title_area">
-		<div class="pro_title01">BRAND PICK</div>
-	</div>
-	<div class="swiper-container swiper1 cboth">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<!-- BRAND PICK  : 슬라이드 01 링크수정 -->
-				<a href="#">
-					<div class="hover_bg bg_c01"></div>
-					<div class="t1">감각적인 메이크업 브랜드 AHC 다돈 최대 10%세일</div>
-					<div class="t2 move">AHC</div>
-					<img src="../img/mimg/pick_ban01.jpg">
-				</a>
-			</div>
-
-			<div class="swiper-slide">
-				<!-- BRAND PICK  : 슬라이드 02 링크수정 -->
-				<a href="#">
-					<div class="hover_bg bg_c02"></div>
-					<div class="t1">애슬레저와 캐쥬얼의 경계를 지향하는 애슬레저 브랜드</div>
-					<div class="t2">BYHEYDAY</div>
-					<img src="../img/mimg/pick_ban02.jpg">
-				</a>
-			</div>
-
-			<div class="swiper-slide">
-				<!-- BRAND PICK  : 슬라이드 03 링크수정 -->
-				<a href="#">
-					<div class="hover_bg bg_c03"></div>
-					<div class="t1">젊은 문화에 이념을 두어 현대적으로 재해석하는 캐주얼</div>
-					<div class="t2">BALLUTE</div>
-					<img src="../img/mimg/pick_ban03.jpg">
-				</a>
-			</div>
-		</div>
-		<!-- 네비게이션 -->
-		<div class="swiper-button-next swiper-button-next1"></div>
-		<div class="swiper-button-prev swiper-button-prev1"></div>
-	</div>
-
-
-	<div class="cboth pdt120"></div>
-
 
 	<div class="focus_grid6 cboth">
 		<!-- FOCUS IN : 타이틀 -->
@@ -233,13 +150,6 @@
 	<div class="cboth pdt80"></div>
 
 
-	<!-- FIXED 배너 -->
-	<div class="fixed_ban cboth">
-		<div class="fixed_ban_title"><a href="#"><img src="../img/mimg/fixed_ban_title.png"></a></div>
-	</div>
-
-
-	<div class="cboth pdt80"></div>
 
 
 	<!-- 메인상품타이틀 : ONLY FOR YOU 추천상품 -->

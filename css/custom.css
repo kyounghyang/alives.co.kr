@@ -69,6 +69,7 @@ a {selector-dummy: expression(this.hideFocus=true);text-decoration:none;}
 .sub_content {padding:0;}
 #footer_wrap {border:0;}
 body, th, td, input, select, textarea, button {font-family:'Nanum Gothic','Montserrat', Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;}
+body {margin:0px;padding:0px;font-family: 'Montserrat','Noto Sans KR',sans-serif;}
 
 /* 서브 메뉴가 왼쪽일때 레이아웃 */
 #contents .sub_content > .side_cont + .content {float:right; width:1500px; padding:0;}
@@ -373,7 +374,7 @@ body, th, td, input, select, textarea, button {font-family:'Nanum Gothic','Monts
 /* 상품진열 공통 스타일 */
 .goods_list {padding:0;}
 .goods_list_cont ul {float:left; width:1740px; font-size: 0; margin:0 0 0 -10px;}
-.goods_list_cont ul li {margin:0 0 55px 0; padding:0;}
+/*.goods_list_cont ul li {margin:0 0 55px 0; padding:0;}*/
 .item_info_cont {padding:0 0 0 10px;}
 .item_tit_box .item_name {color:#151515; font-size:12px; font-weight:400; padding-top:15px;}
 .item_tit_box .item_name_explain {color:#999; font-size:11px; line-height:18px; padding-top:10px;}

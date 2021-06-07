@@ -38,18 +38,12 @@
 		<!-- 이미지 배너 영역 : 시작 -->
 		<div class="swiper-container swiper2">
 			<div class="swiper-wrapper">
+				<!--{ @dataBanner('3035110353', true) }-->
 				<div class="swiper-slide">
 					<!-- 배너 01 이미지 링크 수정 -->
-					<a href="index2.html" style="background:url(../img/story/story_ban01.jpg);"></a>
+					<a href="{.bannerLink}" target="{.bannerTarget}" style="background:url({.bannerImageUrl});"  ></a>
 				</div>
-				<div class="swiper-slide">
-					<!-- 배너 02 이미지 링크 수정 -->
-					<a href="index2.html" style="background:url(../img/story/story_ban02.jpg);"></a>
-				</div>
-				<div class="swiper-slide">
-					<!-- 배너 03 이미지 링크 수정 -->
-					<a href="index2.html" style="background:url(../img/story/story_ban03.jpg);"></a>
-				</div>
+				<!--{ / }-->
 			</div>
 		</div>
 		<!-- 이미지 배너 영역 : 끝 -->

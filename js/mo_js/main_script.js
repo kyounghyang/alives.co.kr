@@ -19,6 +19,30 @@ jQuery(document).ready(function() {
 	});
 
 
+	/* swiper01 : 카테고리 베스트 */
+	var swiper01 = new Swiper('.swiper01', {
+		roundLengths: true,
+		observer: true,
+		observeParents: true,
+		slidesPerView: 3,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next-01',
+			prevEl: '.swiper-button-prev-01',
+        },
+		scrollbar: {
+			el: '.swiper-scrollbar-01',
+			dragSize: 405
+		},
+		on: {
+			sliderMove: function ( event) {
+				//좌우 스크롤시  Lazyload 제거
+			  $(event.target).find(".gd_image_lazy").trigger("scroll");
+			},
+		},
+	});
+
+
 	/* �귣���� �����̵� */
 	var swiper1 = new Swiper('.swiper1', {
         centeredSlides: true,
@@ -68,6 +92,8 @@ jQuery(document).ready(function() {
 		jQuery('ul.m_tab01 li').removeClass('current');
 		jQuery('.tabcontent01').removeClass('current');
 		jQuery(this).addClass('current');
-		jQuery('#' + activeTab).addClass('current');
+		jQuery('#' + activeTab).addClass('current');		
+		//jQuery Lazyload 가 들어가서 이미지 노출을 위해 강제 trigger 발생시킴
+		$('#' + activeTab+" img.gd_image_lazy").trigger("scroll");
 	})
 });
