@@ -652,3 +652,68 @@ body {margin:0px;padding:0px;font-family: 'Montserrat','Noto Sans KR',sans-serif
 	/* 마이페이지 */
 	#contents .sub_content > .side_cont + .content {width:1160px;}
 }
+
+
+
+/*-------------------------------------------------------------------
+    ## 하단디자인
+-------------------------------------------------------------------*/
+.nd-container {position:relative; width:1400px; margin:0 auto;}/* width 반응형 아닐 경우 지정 */
+.nd-container:after {position:relative; display:block; content:""; clear:both;}
+.nd-container .gnb {width:100%;} 
+#footer {overflow:hidden; padding:0; background-color:#323232;}
+#footer_wrap {border-top:none;}
+.nd-footer .footrer-cont{position:relative; width:100%; background:#333333;}
+.nd-footer .footrer-cont .footer-logo{position:absolute; top:50%; left:30px; margin-top:-25px;}
+.nd-footer .footrer-cont .footer-sns{position:relative; text-align:center; padding:64px 0;}
+.nd-footer .footrer-cont .footer-sns h3{display:inline-block; font-size:15px; font-weight:400; color:#ffffff; line-height:30px; padding:0 24px 0 0;}
+.nd-footer .footrer-cont .footer-sns .sns-ico{display:inline-block; line-height:30px; padding:0 14px;}
+.nd-footer .footrer-cont .footer-sns .sns-ico img{vertical-align:middle;}
+/*.nd-footer .footer-nav {background:#f7f7f7;}*/
+/*.nd-footer .footer-nav .nav-list {padding:16px 30px;}*/
+.nd-footer .footer-nav{border-right:1px solid #5b5b5b;}
+.nd-footer .footer-nav ul{width:50%;display:table-cell;}
+.nd-footer .footer-nav ul:first-child{border-right:1px solid #5b5b5b;}
+.nd-footer .footer-nav ul li {/*display:inline-block;*/ text-align:left; font-size:15px; font-weight:400; color:#b5b5b5; line-height:1; /*margin:0 20px;*/padding-bottom:17px;padding-left:30px;padding-right:47px;}
+.nd-footer .footer-nav ul li:first-child{/*margin:0 20px 0 0;*/padding-bottom: 25px;font-family: 'Open Sans',Sans-serif;}
+.nd-footer .footer-nav ul li a{color:#b5b5b5;font-weight:300;}
+.nd-footer .footer-nav ul li a strong{font-weight:300;}
+.nd-footer .footer-nav .nd-cs-list {}
+.nd-footer .footer-info {padding:48px 0 0 0;}
+.nd-footer .footer-info .footer-box-wrap{display:table; width:100%; /*padding-left:30px;*/}
+.nd-footer .footer-info .footer-box-wrap .footer-box{display:table-cell; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;line-height:1;}
+.nd-footer .footer-info .footer-box-wrap .footer-box.footer-box-bank .footer-box-cont{display:inline-block;padding:0 9px 0 0;}
+.nd-footer .footer-info .footer-box-wrap .footer-box.footer-box-bank .footer-box-cont strong{font-family: 'Open Sans',sans-serif;color:#b5b5b5;font-size:15px;font-weight:400;padding:0 10px 0 11px;}
+.nd-footer .footer-info .footer-box-wrap .footer-box + .footer-box{/*border-left:1px solid #d1d1d1;*/ padding-left:32px;}
+.nd-footer .footer-info .footer-box-wrap .footer-box.footer-nav{width:27%;padding-left:0;}
+.nd-footer .footer-info .footer-box-wrap .footer-box h3{font-size:15px; font-weight:400; color:#b5b5b5; line-height:1;display: inline-block;font-family: 'Open Sans',sans-serif;}
+.nd-footer .footer-info .footer-box-wrap .footer-box .footer-box-cont.nd-time{margin:25px 0 27px;}
+.nd-footer .footer-info .footer-box-wrap .footer-box .footer-box-cont p{display:inline-block;font-size:15px; font-weight:300; color:#b5b5b5; letter-spacing: -0.25px; line-height:1;}
+.nd-footer .footer-info .footer-box-wrap .footer-box .footer-box-cont .nd-bank-name:after{display:inline-block;content:"/";padding:0 3px;}
+.nd-footer .footer-info .footer-box-wrap .footer-box .nd-tel-numb{display: inline-block;  line-height:1; font-size:25px; font-weight:700; color:#fff; padding-left:22px;font-family:'Open Sans',sans-serif;}
+.nd-footer .footer-info .footer-box-wrap .footer-box-cs{width:33.5%;border-right:1px solid #5b5b5b;}
+/*.nd-footer .footer-info .footer-box-wrap .footer-box-bank{width:33.3%;}*/
+.nd-footer .footer-info .footer-box-wrap .footer-info-list{width:40%;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list .copyright{font-size:12px; padding:21.5px 0 0 0;color:#838383;font-weight:300;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list .copyright strong{font-weight:300;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list li:first-child{font-family:'Open Sans',sans-serif; padding:0 0 22.5px 0;font-size:15px;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list li{font-size:13px; font-weight:300; color:#b5b5b5;padding:4.5px 0;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list li a{color:#b5b5b5;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list li span:after{content:""; display:inline-block; width:1px; height:13px; margin:0px 12px; background:#b5b5b5; vertical-align:-1px;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list li span:last-child:after{display:none;}
+.nd-footer .footer-info .footer-box-wrap .footer-info-list li .btn_licensee_info{font-size:13px; font-weight:400; color:#b5b5b5; border:none;}
+/*하단 sns*/
+.nd-footer .footer-sns{width:100%;display: flex;padding-top:29px;}
+.nd-footer .footer-sns li{margin-right:10px;}
+/* 하단검색 */
+.nd-footer .footrer-cont .footer-search{position:absolute; top:50%; right:0; margin-top:-24px;display:none;}
+.nd-footer .footrer-cont .footer-search h3{font-size:15px; font-weight:400; color:#ffffff; float:left; padding:0 27px 0 0; line-height:48px;}
+.nd-footer .footrer-cont .footer-search legend{display:none;}
+.nd-footer .footrer-cont .footer-search .top_search{display:inline-block;}
+.nd-footer .footrer-cont .footer-search .top_search .top_text_cont{width:298px;}
+.nd-footer .footrer-cont .footer-search .top_search .top_text_cont .top_srarch_text{width:100%; height:48px; background-color:#e7e7e7; border-radius:30px; padding:5px 60px 5px 15px; box-sizing:border-box;}
+.nd-footer .footrer-cont .footer-search .top_search .top_text_cont .btn_top_srarch{position:absolute; top:14px; right:28px; border-left:none 0;}
+.nd-footer .footrer-cont .footer-search .top_search .search_cont{display:none!important; border:1px solid #f0f0f0; margin:0; font-size:0; background:#ffffff;}
+.nd-footer .footrer-cont .footer-search .top_search .search_cont .recom_box{min-height:65px;}
+.nd-footer .footrer-cont .footer-search .top_search .search_cont .recom_box + .recent_box{width:142px; min-height:65px;}
+.nd-footer .footrer-cont .footer-search .top_search .search_cont .recom_box + .recent_box li a{width:42%;}
