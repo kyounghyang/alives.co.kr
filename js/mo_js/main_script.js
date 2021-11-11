@@ -67,13 +67,6 @@ jQuery(document).ready(function() {
 		slidesPerView: 1,
 		effect: 'fade',
 		loop:true,
-		loopedSlides: 10,
-	});
-	var swiper2 = new Swiper('.swiper2', {
-		slidesPerView: 'auto',
-		spaceBetween: 60,
-		loopedSlides:10,
-		loop: true,
 		pagination: {
 			el: '.swiper-pagination2',
 			clickable: true,			
@@ -82,11 +75,29 @@ jQuery(document).ready(function() {
 			delay: 10000,
 			disableOnInteraction: false,
 		}, 
+		loopedSlides: 10, 
 		speed:1000,
 	});
-	swiper2.controller.control = swiper2_txt;
-	swiper2_txt.controller.control = swiper2;
+	// var swiper2 = new Swiper('.swiper2', {
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 60,
+	// 	loopedSlides:10,
+	// 	loop: true,
+	// 	pagination: {
+	// 		el: '.swiper-pagination2',
+	// 		clickable: true,			
+	// 	},
+    //     autoplay: {
+	// 		delay: 10000,
+	// 		disableOnInteraction: false,
+	// 	}, 
+	// 	speed:1000,
+	// });
+	// swiper2.controller.control = swiper2_txt;
+	// swiper2_txt.controller.control = swiper2;
 
+
+	
 	jQuery('ul.m_tab01 li').click(function() {
 		var activeTab = jQuery(this).attr('data-tab');
 		jQuery('ul.m_tab01 li').removeClass('current');
