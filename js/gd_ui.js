@@ -6,12 +6,12 @@ $(function(){
     }
     
     // top으로 이동
-    $('.btn_scroll_top a').click(
-        function() {
-            $('html, body').stop().animate({scrollTop: $('body').offset().top}, 300);
-            return false;
-        }
-    );
+    // $('.btn_scroll_top a').click(
+    //     function() {
+    //         $('html, body').stop().animate({scrollTop: $('body').offset().top}, 300);
+    //         return false;
+    //     }
+    // );
 });
 
 $(function(){

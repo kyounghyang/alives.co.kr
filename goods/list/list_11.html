@@ -8,11 +8,11 @@
 		
         <li <!--{ ? themeInfo.soldOutIconFl == 'y' && ..soldOut =='y' && soldoutDisplay.soldout_overlay != '0' }-->class="item_soldout"<!--{ / }--> >
 			<div class="p_thumb">
-				<div class="p_icon"><img src="img/prd_ico01.png"></div>
+				<!--<div class="p_icon"><img src="img/prd_ico01.png"></div>-->
 				<div class="btn_zoom">
-					<a href="index3.html"><img src="../../img/main/btn_opt01.png"></a>
-					<a href="index3.html"><img src="../../img/main/btn_opt02.png"></a>
-					<a href="index3.html"><img src="../../img/main/btn_opt03.png"></a>
+					<a class="button_add_wish"  data-goods-no="{..goodsNo}" data-goods-nm="{=gd_remove_only_tag(..goodsNm)}" data-goods-price="{..goodsPrice}" data-goods-image-src="{..goodsImageSrc}" data-optionfl="{..optionFl}" data-min-order-cnt="{..minOrderCnt}" data-option-sno="{..optionSno}" data-goods-image="{..social}" data-sales-unit="{=..salesUnit}" data-fixed-sales="{=..fixedSales}" data-fixed-order-cnt="{=..fixedOrderCnt}" href="javascript:;"><img src="../../img/main/btn_opt01.png"></a>
+					<!--<a href="index3.html"><img src="../../img/main/btn_opt02.png"></a>-->
+					<a class="button_add_cart btn_open_layer" data-mode="cartIn" data-goods-no="{..goodsNo}" href="javascript:;"><img src="../../img/main/btn_opt03.png"></a>
 					<a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}"><img src="../../img/main/btn_opt04.png"></a>
 				</div>
 				<div class="thumb_wrap">
@@ -124,11 +124,6 @@
 </div>
 
 
-
-
-<!-- option layer -->
-<div id="optionViewLayer" class="layer_wrap dn"></div>
-<!-- //option layer -->
 <div id="addCartLayer" class="layer_wrap dn">
     <div class="box add_cart_layer" style="position: absolute; margin: 0px; top: 279.5px; left: 651px;">
         <div class="view">
@@ -162,6 +157,8 @@
     </div>
 </div>
 <!-- //layer_wrap -->
+
+
 <!-- wish template -->
 <form id="frmWishTemplateView" method="post">
     <input type="hidden" name="mode" value="wishIn"/>
@@ -172,7 +169,7 @@
 <script type="text/javascript">
     <!--
     $(document).ready(function(){
-        $('.item_photo_box').on('click', '.btn_add_wish_{mainData.sno}{mainData.groupSno}', function(){
+        $('.btn_zoom').on('click', '.button_add_wish', function(e){
             <!--{ ? gd_is_login() === false }-->
             alert("{=__('로그인하셔야 본 서비스를 이용하실 수 있습니다.')}");
             document.location.href = "../member/login.php";
@@ -223,7 +220,7 @@
             <!--{ / }-->
         });
 
-        $('.item_photo_box').on('click', '.btn_add_cart_{mainData.sno}', function(){
+        $('.btn_zoom').on('click', '.button_add_cart', function(){
             if($(this).data('mode') == 'cartIn') {
                 var params = {
                     page: 'goods',
@@ -239,7 +236,7 @@
                     data: params,
                     success: function (data) {
                         {customScript}
-                        $('#optionViewLayer').empty().append(data);
+                        $('#optionViewLayer').removeClass('dn').empty().append(data);
                         $('#optionViewLayer').find('>div').center();
                     },
                     error: function (data) {
@@ -264,6 +261,7 @@
     });
 
     function gd_goods_option_view_result(params) {
+        console.log("gd_goods_option_view_result")
         params += "&mode=cartIn";
         $.ajax({
             method: "POST",
