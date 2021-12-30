@@ -4,43 +4,26 @@
 <div class="gnb_menu_box">
     <ul class="depth0 gnb_menu0">
         <!--{ @ data }-->
-                <!--{ ? .children }-->
-                    <!--{ @ .children }-->
-                    <li <!--{ ? ..divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-                        <!--{ ? ..divisionFl =='n' }-->
-                        <a href="../goods/goods_list.php?{cateType}Cd={..cateCd}" >{..cateNm}</a>
+                    <li <!--{ ? .divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                        <!--{ ? .divisionFl =='n' }-->
+                        <a href="../goods/goods_list.php?{cateType}Cd={.cateCd}" >{.cateNm}</a>
                         <!--{ : }-->
-                        {..cateNm} 
+                        {.cateNm} 
                         <!--{ / }-->
-                        <!--{ ? ..children }-->
+                        <!--{ ? .children }-->
                         <ul class="depth2">
-                            <!--{ @ ..children }-->
-                            <li <!--{ ? ...divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-                                <!--{ ? ...divisionFl =='n' }-->
-                                <a href="../goods/goods_list.php?{cateType}Cd={...cateCd}" >{...cateNm}</a>
+                            <!--{ @ .children }-->
+                            <li <!--{ ? ..divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                                <!--{ ? ..divisionFl =='n' }-->
+                                <a href="../goods/goods_list.php?{cateType}Cd={..cateCd}" >{..cateNm}</a>
                                 <!--{ : }-->
-                                {...cateNm}
-                                <!--{ / }-->
-                                <!--{ ? ...children }-->
-                                <ul class="depth3">
-                                    <!--{ @ ...children }-->
-                                    <li <!--{ ? ....divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-                                    <!--{ ? ....divisionFl =='n' }-->
-                                    <a href="../goods/goods_list.php?{cateType}Cd={....cateCd}" >{....cateNm}</a>
-                                    <!--{ : }-->
-                                    {....cateNm}
-                                    <!--{ / }-->
-                                    </li>
-                                    <!--{ / }-->
-                                </ul>
-                                <!--{ / }-->
+                                {..cateNm}
+                                <!--{ / }-->                                
                             </li>
                             <!--{ / }-->
                         </ul>
                         <!--{ / }-->
                     </li>
-                    <!--{ / }-->
-                <!--{ / }-->
         <!--{ / }-->
     </ul>
 </div>
