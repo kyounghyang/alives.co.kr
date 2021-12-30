@@ -4,52 +4,43 @@
 <div class="gnb_menu_box">
     <ul class="depth0 gnb_menu0">
         <!--{ @ data }-->
-        <li <!--{ ? .divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-            <!--{ ? .divisionFl =='n' }-->
-            <a href="../goods/goods_list.php?{cateType}Cd={.cateCd}" >{.cateNm}</a>
-            <!--{ : }-->
-            {.cateNm}
-            <!--{ / }-->
-            <!--{ ? .children }-->
-            <ul class="depth1">
-                <!--{ @ .children }-->
-                <li <!--{ ? ..divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-                    <!--{ ? ..divisionFl =='n' }-->
-                    <a href="../goods/goods_list.php?{cateType}Cd={..cateCd}" >{..cateNm}</a>
-                    <!--{ : }-->
-                    {..cateNm}
-                    <!--{ / }-->
-                    <!--{ ? ..children }-->
-                    <ul class="depth2">
-                        <!--{ @ ..children }-->
-                        <li <!--{ ? ...divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-                            <!--{ ? ...divisionFl =='n' }-->
-                            <a href="../goods/goods_list.php?{cateType}Cd={...cateCd}" >{...cateNm}</a>
-                            <!--{ : }-->
-                            {...cateNm}
-                            <!--{ / }-->
-                            <!--{ ? ...children }-->
-                            <ul class="depth3">
-                                <!--{ @ ...children }-->
-                                <li <!--{ ? ....divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
-                                <!--{ ? ....divisionFl =='n' }-->
-                                <a href="../goods/goods_list.php?{cateType}Cd={....cateCd}" >{....cateNm}</a>
-                                <!--{ : }-->
-                                {....cateNm}
-                                <!--{ / }-->
-                                </li>
-                                <!--{ / }-->
-                            </ul>
-                            <!--{ / }-->
-                        </li>
+                <!--{ ? .children }-->
+                    <!--{ @ .children }-->
+                    <li <!--{ ? ..divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                        <!--{ ? ..divisionFl =='n' }-->
+                        <a href="../goods/goods_list.php?{cateType}Cd={..cateCd}" >{..cateNm}</a>
+                        <!--{ : }-->
+                        {..cateNm} 
                         <!--{ / }-->
-                    </ul>
+                        <!--{ ? ..children }-->
+                        <ul class="depth2">
+                            <!--{ @ ..children }-->
+                            <li <!--{ ? ...divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                                <!--{ ? ...divisionFl =='n' }-->
+                                <a href="../goods/goods_list.php?{cateType}Cd={...cateCd}" >{...cateNm}</a>
+                                <!--{ : }-->
+                                {...cateNm}
+                                <!--{ / }-->
+                                <!--{ ? ...children }-->
+                                <ul class="depth3">
+                                    <!--{ @ ...children }-->
+                                    <li <!--{ ? ....divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                                    <!--{ ? ....divisionFl =='n' }-->
+                                    <a href="../goods/goods_list.php?{cateType}Cd={....cateCd}" >{....cateNm}</a>
+                                    <!--{ : }-->
+                                    {....cateNm}
+                                    <!--{ / }-->
+                                    </li>
+                                    <!--{ / }-->
+                                </ul>
+                                <!--{ / }-->
+                            </li>
+                            <!--{ / }-->
+                        </ul>
+                        <!--{ / }-->
+                    </li>
                     <!--{ / }-->
-                </li>
                 <!--{ / }-->
-            </ul>
-            <!--{ / }-->
-        </li>
         <!--{ / }-->
     </ul>
 </div>

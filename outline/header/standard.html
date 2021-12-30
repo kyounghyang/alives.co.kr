@@ -72,23 +72,23 @@
 
 
 	<div class="header_sec02"  id="comment_top">
+		<!-- 일반 카테고리 --> 
+		<div class="top_cate">
+			<div class="gnb">{=includeWidget('proc/category_side', 'type', 'top','cateType','cate','menuType','all')}</div>
+
+			<!-- 일반 수동 추가 카테고리 
+			<div class="top_add">
+				<ul>
+					<li class="top_cate_space"><a href="#">EXCLUSIVE</a><li>
+					<li><a href="#">EVENT</a><li>
+					<li><a href="#">STORE</a><li>
+				</ul>
+			</div>--> 
+		</div>
 		<div class="inner">
 			<!-- 상단로고 -->
 			<div class="top_logo"><a href="/"><img src="../../img/logo.png"></a></div>
 
-			<!-- 일반 카테고리 --> 
-			<div class="top_cate">
-				<div class="gnb">{=includeWidget('proc/category_side', 'type', 'top','cateType','cate','menuType','all')}</div>
-
-				<!-- 일반 수동 추가 카테고리 --> 
-				<div class="top_add">
-					<ul>
-						<li class="top_cate_space"><a href="#">EXCLUSIVE</a><li>
-						<li><a href="#">EVENT</a><li>
-						<li><a href="#">STORE</a><li>
-					</ul>
-				</div>
-			</div>
 
 			<!-- 우측 아이콘 메뉴 -->
 			<div class="top_comm">
@@ -99,6 +99,7 @@
 				</ul>
 			</div> 
 		</div><!-- //inner -->
+
 	</div><!-- //header_sec02 -->
 
 

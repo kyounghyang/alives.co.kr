@@ -1,9 +1,10 @@
 $(function(){
     if ($('#scroll_right, #scroll_left').length > 0) {
         $('#scroll_right, #scroll_left').gb_quick_menu({
-            //HEADER_ID: '#header_warp'
+            // HEADER_ID: '#header_warp'
         });
     }
+    
     // top으로 이동
     $('.btn_scroll_top a').click(
         function() {
@@ -40,16 +41,14 @@ $(function(){
     gd_display_cate();
     /* 상단 메뉴 */
     var gd_topmenu = function(){
-        $('.depth0 li').on({
+        $('.depth0').on({
             'mouseover':function(){
-                $(this).find('> ul').stop(true,true).fadeIn('fast');
-                $(this).find('> a').addClass('active');
-                //console.log('open');
+                $(this).find('>li > ul').stop(true,true).fadeIn('fast');
+                $(this).find('>li > a').addClass('active');
             },
             'mouseleave':function(){
-                $(this).find('> ul').stop(true,true).fadeOut('fast');
-                $(this).find('> a').removeClass('active');
-                //console.log('hide');
+                $(this).find('>li > ul').stop(true,true).fadeOut('fast');
+                $(this).find('>li > a').removeClass('active');
             }
         });
     };
@@ -349,9 +348,11 @@ jQuery.fn.currentCenter = function() {
             'scroll':function(){
                 var win_width = $(window).innerWidth();
                 scqTop = $(this).scrollTop();
+                console.log('quickTop',quickTop)
                 if(scqTop <= quickTop){
                     el.removeClass(options.FIXED_CLS).removeAttr('style');
                 }else{
+                    console.log('options.FIXED_SIZE',options.HEADER_ID, options.FIXED_SIZE)
                     if(win_width > options.FIXED_SIZE){
                         el.addClass(options.FIXED_CLS).removeAttr('style');
                     }else{
