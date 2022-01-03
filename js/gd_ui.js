@@ -207,6 +207,18 @@ $(function(){
             }
         }
     });
+
+
+    /* 상단 메뉴 */
+    $('.thumb_wrap').on({
+        'mouseover':function(){
+            var hover = $(this).find('.image-hover').get(0);
+            console.log($(hover).data('image-magnify'))
+            $(hover).attr('src', $(hover).data('image-magnify'));
+        },
+        'mouseleave':function(){
+        }
+    });
 });
 
 

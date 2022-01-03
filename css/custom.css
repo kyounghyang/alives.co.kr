@@ -1403,7 +1403,19 @@ body {
     text-align: center;
 }
 .item_gallery_type .item_cont .item_photo_box a img {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
     width: 100%;
+}
+
+.item_gallery_type .item_cont .item_photo_box a img:nth-child(2) {
+    opacity: 0;
+}
+.item_gallery_type .item_cont .item_photo_box:hover a img:nth-child(2) {
+    opacity: 1;
 }
 .item_gallery_type .item_info_cont {
     display: table;
@@ -2587,6 +2599,7 @@ body {
 
 .main_pro .thumb_wrap {
     overflow: hidden;
+    padding-top: 133.333%;
 }
 .main_pro .thumb_wrap img {
     -webkit-transition: all 0.8s;
@@ -2594,12 +2607,45 @@ body {
     -ms-transition: all 0.8s;
     -o-transition: all 0.8s;
     transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .main_pro ul li:hover .thumb_wrap img {
     transform: scale(1.06);
     -webkit-transform: scale(1.06);
     -moz-transform: scale(1.06);
     -o-transform: scale(1.06);
+}
+
+/**
+* 롤오버시 2번째 이미지로 변환
+*/
+
+.main_pro .thumb_hover_wrap {
+    overflow: hidden;
+    padding-top: 133.333%;
+}
+.main_pro .thumb_hover_wrap img {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.main_pro ul li .thumb_hover_wrap img:nth-child(2) {
+    opacity: 0;
+}
+
+.main_pro ul li:hover .thumb_hover_wrap img:nth-child(2) {
+    opacity: 1;
 }
 
 .main_pro .p_info {
@@ -2749,4 +2795,44 @@ body {
     #footer {
         width: 1380px;
     }
+}
+
+.item_photo_box {
+    width: 100%;
+}
+/**
+* 롤오버시 2번째 이미지로 변환
+*/
+
+.thumb_hover_wrap {
+    overflow: hidden;
+    padding-top: 133.333%;
+}
+.thumb_hover_wrap img {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.thumb_hover_wrap img:nth-child(2) {
+    opacity: 0;
+}
+
+.thumb_hover_wrap:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+.main_grid4 ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.main_grid4 ul li {
+    width: calc(25% - 20px) !important;
 }

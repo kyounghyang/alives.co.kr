@@ -19,10 +19,11 @@
 					<a class="button_add_cart btn_open_layer" data-mode="cartIn" data-goods-no="{..goodsNo}" href="javascript:;"><img src="../../img/main/btn_opt03.png"></a>
 					<a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}"><img src="../../img/main/btn_opt04.png"></a>
 				</div>
-				<div class="thumb_wrap">
+				<div class="thumb_hover_wrap">
 					<a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}" <!--{ ? themeInfo.relationLinkFl == 'blank' }--> target="_blank"<!--{ / }-->>
 						<!--{ ? in_array('img', themeInfo.displayField) && gd_isset(..goodsImage) }-->
 						{..goodsImage}
+                        {..goodsImage2}
 						<!--{ / }-->
 					</a>
 				</div>

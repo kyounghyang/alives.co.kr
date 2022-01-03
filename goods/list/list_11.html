@@ -7,7 +7,7 @@
         <!--{ @ .value_ }-->
 		
         <li <!--{ ? themeInfo.soldOutIconFl == 'y' && ..soldOut =='y' && soldoutDisplay.soldout_overlay != '0' }-->class="item_soldout"<!--{ / }--> >
-			<div class="p_thumb">
+			<div class="p_thumb" test="00{=.test}">
 				<!--<div class="p_icon"><img src="img/prd_ico01.png"></div>-->
 				<div class="btn_zoom">
 					<a class="button_add_wish"  data-goods-no="{..goodsNo}" data-goods-nm="{=gd_remove_only_tag(..goodsNm)}" data-goods-price="{..goodsPrice}" data-goods-image-src="{..goodsImageSrc}" data-optionfl="{..optionFl}" data-min-order-cnt="{..minOrderCnt}" data-option-sno="{..optionSno}" data-goods-image="{..social}" data-sales-unit="{=..salesUnit}" data-fixed-sales="{=..fixedSales}" data-fixed-order-cnt="{=..fixedOrderCnt}" href="javascript:;"><img src="../../img/main/btn_opt01.png"></a>
@@ -15,10 +15,11 @@
 					<a class="button_add_cart btn_open_layer" data-mode="cartIn" data-goods-no="{..goodsNo}" href="javascript:;"><img src="../../img/main/btn_opt03.png"></a>
 					<a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}"><img src="../../img/main/btn_opt04.png"></a>
 				</div>
-				<div class="thumb_wrap">
+				<div class="thumb_hover_wrap">
 					<a href="{=gd_goods_url(..goodsUrl, ..goodsNo)}" <!--{ ? themeInfo.relationLinkFl == 'blank' }--> target="_blank"<!--{ / }-->>
 						<!--{ ? in_array('img', themeInfo.displayField) && gd_isset(..goodsImage) }-->
 						{..goodsImage}
+                        {..goodsImage2}
 						<!--{ / }-->
 					</a>
 				</div>
@@ -112,6 +113,7 @@
 				<!--{ / }-->
 				<!-- //item_icon_box -->
 
+                {..goodsColor}
 			</div>
 		</li>
         <!--{ / }-->
