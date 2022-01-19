@@ -374,6 +374,13 @@ body {
     margin: 0px;
     padding: 0px;
     font-size: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    right: 0%;
+    z-index: 1000;
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb !important;
 }
 #comment_top.fixed {
     position: fixed;
@@ -931,7 +938,7 @@ body {
 }
 #mobile_allcate .nav_t02 ul li {
     float: right;
-    width: 168px;
+    width: 165px;
     height: 46px;
     border: 1px solid #151515;
 }
@@ -1821,7 +1828,7 @@ body {
 /* 상세페이지 리뷰버튼 */
 .btn_review span {
     float: left;
-    margin: 50px 5px 0 0;
+    margin: 93px 5px 0 0;
     color: #b9b9b9;
     font-size: 12px;
 }
@@ -2637,6 +2644,7 @@ body {
     transition: all 1s;
     position: absolute;
     top: 0;
+    left: 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -2739,13 +2747,42 @@ body {
 .goods_list .goods_list_cont {
     position: static;
 }
+.main_sec03 {
+    margin-top: 100px;
+    padding: 120px;
+    border: solid 1px #e5e5e5;
+}
+
+.main_sec03 .tab_menu_area {
+    flex-shrink: 0;
+}
 .main_sec03 .tab_pro_area {
+    flex-grow: 1;
 }
 .tab_pro_area .goods_list_cont ul {
     margin: 0 !important;
 }
 .tab_pro_area .goods_list_cont ul li {
     margin-top: 0 !important;
+}
+.main_sec03 .goods_list_cont ul {
+    width: 100% !important;
+}
+.main_sec03 .goods_list_cont ul li {
+    flex: 1;
+}
+.main_sec03 .swiper01 {
+    width: unset !important;
+    float: unset !important;
+}
+.main_sec03 .swiper01 .swiper-container {
+    float: unset !important;
+}
+.main_sec03 .swiper01 .swiper-scrollbar {
+    border: unset !important;
+}
+.main_sec03 .swiper01 li.swiper-slide {
+    margin-bottom: unset !important;
 }
 
 /* 메인 grid4 사이즈 및 미디어 쿼리  */
@@ -2817,4 +2854,38 @@ body {
 }
 .main_grid4 ul li {
     width: calc(25% - 20px) !important;
+}
+
+#NPAY_BUTTON_BOX_ID {
+    padding: unset !important;
+}
+
+/**
+* 최근 본상품
+*/
+.today_view h4 {
+    margin: 50px 0px 20px;
+}
+.today_view ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.today_view ul li {
+    width: 30%;
+}
+
+.today_view ul li a {
+    width: 100%;
+    padding-top: 133%;
+    position: relative;
+    display: block;
+}
+.today_view ul li img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

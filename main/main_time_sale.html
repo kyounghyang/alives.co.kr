@@ -1,0 +1,162 @@
+
+<style>
+#mainTimeSale{
+    margin-bottom: 100px;
+}
+#mainTimeSale .icon_time_sale {
+    width: 50px;
+    height: 50px;
+}
+
+/* ------------- 타임세일 ------------- */
+.time_sale_cont{}
+.time_sale_tit{overflow:hidden; position:relative; border-bottom:1px solid #999999;}
+.time_sale_tit h2{/*width:70%;*/ padding:0 0 30px 0; font-size:24px;}
+.time_sale_tit strong{position:absolute; bottom:7px; right:10px; color:#ab3e55; font-size:13px;}
+
+.time_sale_info{/*min-height:200px; border:1px solid #dbdbdb;*/}
+.time_sale_info img{max-width:100%;}
+
+/* 상단 타임보드 */
+.sale_clock{overflow:hidden;  padding:20px 0 20px 0; border-bottom:1px solid #dbdbdb; vertical-align:middle;}
+.sale_clock .clock_cont{text-align:center;}
+.sale_clock .clock_cont .clock_tit{padding:0 30px 0 0; font-size:22px;}
+.sale_clock .clock_box{display:inline-block; font-size:0; line-height:50px; vertical-align:middle;}
+.sale_clock .clock_box strong,
+.sale_clock .clock_box span{display:inline-block; font-size:34px;}
+.sale_clock .clock_box em{display:inline-block; height:50px; margin:0 10px 0 0; font-size:34px;}
+.sale_clock .clock_box em strong{display:inline-block; width:38px; height:50px; margin:0 -5px 0 0; padding:0; color:#ffffff; font-size:36px; font-weight:bold; text-align:center; line-height:50px;
+    background:url("../img/common/bg/bg_sale_clock.png") no-repeat 0 0;}
+.sale_clock .clock_box em + span{padding:0 10px 0 5px;}
+.sale_clock .clock_box .next-month{margin:0 10px 0 0;}
+.sale_clock .clock_box .next-month + span{margin:0 7px 0 -5px;}
+.sale_clock .sale_buy_num{font-size:20px; text-align:center;}
+.sale_clock .sale_buy_num strong{color:#ab3e55; font-size:24px;}
+    </style>
+</style>
+<div id="mainTimeSale">
+    <!--
+         <div class="time_sale_tit">
+        <h2>{timeSaleInfo.timeSaleTitle}</h2>
+        <strong>{=__('기간')} : {timeSaleInfo.startDt} ~ {timeSaleInfo.endDt} </strong>
+    </div>
+    -->
+    <!-- //time_sale_info -->
+    <div id="displayTimeSale" class="sale_clock">
+        <div class="clock_cont">
+            <div class="clock_box">
+                <strong class="clock_tit">{=__('타임세일')}</strong>
+                <em id="timeDay" class="day"></em>
+                <span class="day">{=__('일')}</span>
+                <em id="timeHour" class="hour">
+                    <strong>{=substr(limitDate.hour,0,1)}</strong>
+                    <strong>{=substr(limitDate.hour,0,1)}</strong>
+                </em>
+                <span>:</span>
+                <em id="timeMin" class="min">
+                    <strong>{=substr(limitDate.min,0,1)}</strong>
+                    <strong>{=substr(limitDate.min,0,1)}</strong>
+                </em>
+                <span>:</span>
+                <em id="timeSec" class="sec">
+                    <strong>{=substr(limitDate.sec,0,1)}</strong>
+                    <strong>{=substr(limitDate.sec,0,1)}</strong>
+                </em>
+            </div>
+        </div>
+        <!-- //clock_cont -->
+    </div>
+    <div class="goods_list">
+        <div class="goods_list_cont">
+            <!-- 상품 리스트 -->
+            { # goodsTemplate }
+            <!-- //상품 리스트 -->
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.btn_goods_view_down_more').on('click', function(e){
+            gd_get_list($(this).data('page'));
+        });
+
+        $('form[name=frmList] select[name=pageNum]').change(function() {
+            $('form[name=frmList]').get(0).submit();
+        });
+
+        $('form[name=frmList] input[name=sort]').click(function() {
+            $('form[name=frmList]').get(0).submit();
+        });
+
+        $(':radio[name="sort"][value="{sort}"]').prop("checked","checked")
+        $(':radio[name="sort"][value="{sort}"]').next().addClass('on');
+
+        $("#displayTimeSale").hide();
+        gd_dailyMissionTimer('{=timeSaleInfo.timeSaleDuration}');
+
+    });
+
+    function gd_get_list(page) {
+        var totalPage = $('input[name="totalPage"]').val();
+
+        $.get('../event/time_sale.php', {'mode' : 'get_more', 'more' : page, 'sno' : '{timeSaleInfo.sno}', 'sort' : '{sort}'}, function (data) {
+            $(".goods_list_cont").html(data);
+            if (parseInt(page) + 1 > totalPage) {
+                $('.btn_goods_view_down_more').hide();
+            } else {
+                $('.btn_goods_view_down_more').data('page', parseInt(page) + 1);
+            }
+        });
+    }
+
+
+    /**
+     * 시간간격 카운트
+     * @returns {String}
+     */
+    function gd_dailyMissionTimer(duration) {
+
+        var timer = duration;
+        var days,hours, minutes, seconds;
+
+        var interval = setInterval(function(){
+            days	= parseInt(timer / 86400, 10);
+            hours	= parseInt(((timer % 86400 ) / 3600), 10);
+            minutes = parseInt(((timer % 3600 ) / 60), 10);
+            seconds = parseInt(timer % 60, 10);
+
+            if(days <= 0) {
+                $('.day').hide();
+            } else {
+                $('#timeDay').html("");
+
+                days 	= days < 10 ? "0" + days : days;
+                for(i = 0; i < days.toString().length; i++) {
+                    $('#timeDay').append("<strong>"+days.toString().substr(i,1)+"</strong>");
+                }
+            }
+
+            hours 	= hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            $('#timeHour strong').eq(0).text(hours.toString().substr(0,1));
+            $('#timeHour strong').eq(1).text(hours.toString().substr(1,1));
+
+            $('#timeMin strong').eq(0).text(minutes.toString().substr(0,1));
+            $('#timeMin strong').eq(1).text(minutes.toString().substr(1,1));
+
+            $('#timeSec strong').eq(0).text(seconds.toString().substr(0,1));
+            $('#timeSec strong').eq(1).text(seconds.toString().substr(1,1));
+
+            $("#displayTimeSale").show();
+
+            if (--timer < 0) {
+                timer = 0;
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+
+</script>

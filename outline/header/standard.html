@@ -8,7 +8,7 @@
 <script type="text/javascript" src="../../js/mo_js/mcommon.js"></script><!-- morenvy script -->
 
 
-<div id="header">
+<div id="header" class="fixed">
 	<div class="header_sec01">
 		<div class="inner">
 			<ul class="sec01_left fleft">
@@ -37,8 +37,8 @@
 						<!-- 검색 폼 -->
 					</div><!-- //header_search_cont -->
 				</li>
-				
-					<!-- 인기검색어
+
+				<!-- 인기검색어
 				<li class="top_pop">
 					<a href="#" class="first"><span>1.</span>퍼펙트후디</a>
 					<div class="top_pop_sub">
@@ -71,10 +71,11 @@
 	</div><!-- //header_sec01 -->
 
 
-	<div class="header_sec02"  id="comment_top">
-		<!-- 일반 카테고리 --> 
+	<div class="header_sec02" id="comment_top2">
+		<!-- 일반 카테고리 -->
 		<div class="top_cate">
-			<div class="gnb">{=includeWidget('proc/category_side', 'type', 'top','cateType','cate','menuType','all')}</div>
+			<div class="gnb">{=includeWidget('proc/category_side', 'type', 'top','cateType','cate','menuType','all')}
+			</div>
 
 			<!-- 일반 수동 추가 카테고리 
 			<div class="top_add">
@@ -83,7 +84,7 @@
 					<li><a href="#">EVENT</a><li>
 					<li><a href="#">STORE</a><li>
 				</ul>
-			</div>--> 
+			</div>-->
 		</div>
 		<div class="inner">
 			<!-- 상단로고 -->
@@ -94,10 +95,11 @@
 			<div class="top_comm">
 				<ul>
 					<li><a href="../mypage/my_page_password.php"><img src="../../img/mimg/top_icon01.gif"></a></li>
-					<li class="top_cart"><a href="/order/cart.php"><span>0</span><img src="../../img/mimg/top_icon02.gif"></a></li>
+					<li class="top_cart"><a href="/order/cart.php"><span>0</span><img
+								src="../../img/mimg/top_icon02.gif"></a></li>
 					<li><a href="#none" onclick="openNav()"><img src="../../img/mimg/top_icon03.gif"></a></li>
 				</ul>
-			</div> 
+			</div>
 		</div><!-- //inner -->
 
 	</div><!-- //header_sec02 -->
@@ -133,30 +135,30 @@
 					<li><a href="/service/index.php">고객센터111</a></li>
 				</ul>
 			</div><!-- //nav_t03 -->
-				
-			<!-- 카테고리 자동출력 -->
-			<ul class="nav_tabs cboth">
-				<li class="active" rel="nav_tab1">카테고리</li>
-				<li rel="nav_tab2">커뮤니티</li>
-			</ul>
-			<div class="cboth nav_tab_container">
-				<div id="nav_tab1" class="nav_tab_content">
-					{=includeWidget('proc/category_side', 'type', 'tree','cateType','cate','menuType','all')}
-				</div>
 
-				<div id="nav_tab2" class="nav_tab_content">
-					<ul class="nav_cate cboth">
-						<li><a href="/board/list.php?bdId=notice">NOTICE</a></li>
-						<li><a href="/board/list.php?bdId=event">EVENT</a></li>
-						<li><a href="/board/list.php?bdId=goodsreview">REVIEW</a></li>
-						<li><a href="/board/list.php?bdId=goodsqa">Q&A</a></li>
-						<li><a href="/board/list.php?bdId=gallery">GALLERY</a></li>
-					</ul>
-				</div>
-			</div><!-- //nav_tab_container -->
+
+			<div class="today_view">
+				<h4>TODAY VIEW</h4>
+				<ul>
+					<!--{ @ dataTodayGoods(3) }-->
+					<!--{ @ .value_ }-->
+					<li>
+						<a href="../goods/goods_view.php?goodsNo={..goodsNo}">
+								<img src="{=..goodsImageSrc}" alt="{=..goodsNm}">
+						</a>
+					</li>
+					<!--{ / }-->
+					<!--{ / }-->			
+				</ul>
+			</div>
+			
+			<!-- //nav_tab_container -->
 		</div><!-- //allcate_inner -->
-		<div class="mobile_allcate_Close"><a href="#none" onclick="closeNav()"><img src="../../img/mimg/slide/slidenav_close.gif" class="rotate"></a></div>
+		<div class="mobile_allcate_Close"><a href="#none" onclick="closeNav()"><img
+					src="../../img/mimg/slide/slidenav_close.gif" class="rotate"></a></div>
 	</div><!-- //mobile_allcate -->
 
 </div><!-- //header -->
+<div style="width:100%;height:147px;">
 
+</div>

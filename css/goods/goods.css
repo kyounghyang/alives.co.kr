@@ -99,7 +99,7 @@
 .btn_restock_box{text-align:center;}
 
 /* 페이고페이,네이버 페이 */
-.pay_box{margin:20px 0 10px 0; text-align:right;}
+.pay_box{margin:50px 0 10px 0; text-align:right;}
 .pay_box .payco_pay,
 .pay_box .naver_pay{display:inline-block; margin:0 0 10px 0;}
 
