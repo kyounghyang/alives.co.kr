@@ -34,47 +34,48 @@
 .sale_clock .sale_buy_num strong{color:#ab3e55; font-size:24px;}
     </style>
 </style>
-<div id="mainTimeSale">
-    <!--
-         <div class="time_sale_tit">
-        <h2>{timeSaleInfo.timeSaleTitle}</h2>
-        <strong>{=__('기간')} : {timeSaleInfo.startDt} ~ {timeSaleInfo.endDt} </strong>
-    </div>
-    -->
-    <!-- //time_sale_info -->
-    <div id="displayTimeSale" class="sale_clock">
-        <div class="clock_cont">
-            <div class="clock_box">
-                <strong class="clock_tit">{=__('타임세일')}</strong>
-                <em id="timeDay" class="day"></em>
-                <span class="day">{=__('일')}</span>
-                <em id="timeHour" class="hour">
-                    <strong>{=substr(limitDate.hour,0,1)}</strong>
-                    <strong>{=substr(limitDate.hour,0,1)}</strong>
-                </em>
-                <span>:</span>
-                <em id="timeMin" class="min">
-                    <strong>{=substr(limitDate.min,0,1)}</strong>
-                    <strong>{=substr(limitDate.min,0,1)}</strong>
-                </em>
-                <span>:</span>
-                <em id="timeSec" class="sec">
-                    <strong>{=substr(limitDate.sec,0,1)}</strong>
-                    <strong>{=substr(limitDate.sec,0,1)}</strong>
-                </em>
+ <!--{ ? timeSaleInfo }-->
+    <div id="mainTimeSale">
+        <!--
+            <div class="time_sale_tit">
+            <h2>{timeSaleInfo.timeSaleTitle}</h2>
+            <strong>{=__('기간')} : {timeSaleInfo.startDt} ~ {timeSaleInfo.endDt} </strong>
+        </div>
+        -->
+        <!-- //time_sale_info -->
+        <div id="displayTimeSale" class="sale_clock">
+            <div class="clock_cont">
+                <div class="clock_box">
+                    <strong class="clock_tit">{=__('타임세일')}</strong>
+                    <em id="timeDay" class="day"></em>
+                    <span class="day">{=__('일')}</span>
+                    <em id="timeHour" class="hour">
+                        <strong>{=substr(limitDate.hour,0,1)}</strong>
+                        <strong>{=substr(limitDate.hour,0,1)}</strong>
+                    </em>
+                    <span>:</span>
+                    <em id="timeMin" class="min">
+                        <strong>{=substr(limitDate.min,0,1)}</strong>
+                        <strong>{=substr(limitDate.min,0,1)}</strong>
+                    </em>
+                    <span>:</span>
+                    <em id="timeSec" class="sec">
+                        <strong>{=substr(limitDate.sec,0,1)}</strong>
+                        <strong>{=substr(limitDate.sec,0,1)}</strong>
+                    </em>
+                </div>
+            </div>
+            <!-- //clock_cont -->
+        </div>
+        <div class="goods_list">
+            <div class="goods_list_cont">
+                <!-- 상품 리스트 -->
+                { # goodsTemplate }
+                <!-- //상품 리스트 -->
             </div>
         </div>
-        <!-- //clock_cont -->
     </div>
-    <div class="goods_list">
-        <div class="goods_list_cont">
-            <!-- 상품 리스트 -->
-            { # goodsTemplate }
-            <!-- //상품 리스트 -->
-        </div>
-    </div>
-</div>
-
+<!--{ / }-->
 <script type="text/javascript">
     $(document).ready(function () {
         $('.btn_goods_view_down_more').on('click', function(e){
