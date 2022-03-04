@@ -1906,3 +1906,37 @@
     text-align: center;
     margin: 10px 0;
 }
+
+/* -------------Vimeo 게시판 ------------- */
+
+.board_list_vimeo {
+}
+
+.board_list_vimeo ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.board_list_vimeo ul li {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+
+.board_list_vimeo ul li .board_tit {
+    padding-top: 56.25%;
+    position: relative;
+}
+.board_list_vimeo ul li iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.board_list_vimeo ul li .title {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-size: 14px;
+    text-decoration: underline;
+}
