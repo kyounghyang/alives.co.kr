@@ -191,9 +191,7 @@ a {
 .sub_content {
     padding: 0;
 }
-#footer_wrap {
-    border: 0;
-}
+
 body,
 th,
 td,
@@ -2270,6 +2268,7 @@ body {
 }
 #footer_wrap {
     border-top: none;
+    margin-top: 70px;
 }
 .nd-footer .footrer-cont {
     position: relative;
@@ -2891,4 +2890,46 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* 인스타그램 */
+.nd-insta-area {
+    width: 100%;
+    padding-bottom: 80px;
+    background-color: #f7f7f7;
+}
+.nd-insta-wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 62px;
+    text-align: center;
+}
+.nd-insta-wrap .nd-insta-tit {
+    font-family: "Open Sans", Sans-serif;
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333333;
+    margin: 0 0 25px 0;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1;
+}
+.nd-insta-wrap .nd-insta-tit .nd-insta-ico {
+    margin-right: 7px;
+    font-size: 0;
+    vertical-align: -3px;
+}
+.nd-insta-wrap .nd-insta-tit .nd-insta-id {
+    font-size: 0;
+    padding: 15px 0;
+}
+.nd-insta-wrap .nd-insta-tit .nd-insta-link {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    letter-spacing: 0;
+    vertical-align: bottom;
 }
