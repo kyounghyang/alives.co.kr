@@ -578,12 +578,12 @@
 
 @media screen and (max-width: 1699px) {
     .width1680 {
-        width: 1432px;
+        max-width: 1432px;
     }
 }
 @media screen and (max-width: 1499px) {
     .width1680 {
-        width: 1280px;
+        max-width: 1280px;
     }
 }
 

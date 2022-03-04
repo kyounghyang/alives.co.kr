@@ -107,7 +107,7 @@ jQuery(document).ready(function () {
 		jQuery('#' + activeTab).addClass('current');
 		//jQuery Lazyload 가 들어가서 이미지 노출을 위해 강제 trigger 발생시킴
 		setTimeout(function () {
-			$('#' + activeTab + " img.gd_image_lazy").trigger("scroll");
+			//$('#' + activeTab + " img.gd_image_lazy").trigger("scroll");
 		}, 10);
 	})
 });

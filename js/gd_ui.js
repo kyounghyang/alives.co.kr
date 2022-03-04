@@ -350,7 +350,7 @@ jQuery.fn.currentCenter = function() {
         var options = $.extend({}, defaults, options);
         var el = $(this);
         var scqTop = 0;
-        var quickTop = $(options.HEADER_ID).offset().top;
+        var quickTop = 720; //$(options.HEADER_ID).offset().top;
         var qucik_left = $(options.LEFT_QUICK_ID).css('left');
 
         $(window).on({
@@ -360,11 +360,9 @@ jQuery.fn.currentCenter = function() {
             'scroll':function(){
                 var win_width = $(window).innerWidth();
                 scqTop = $(this).scrollTop();
-                console.log('quickTop',quickTop)
                 if(scqTop <= quickTop){
                     el.removeClass(options.FIXED_CLS).removeAttr('style');
                 }else{
-                    console.log('options.FIXED_SIZE',options.HEADER_ID, options.FIXED_SIZE)
                     if(win_width > options.FIXED_SIZE){
                         el.addClass(options.FIXED_CLS).removeAttr('style');
                     }else{

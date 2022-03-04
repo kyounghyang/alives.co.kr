@@ -1639,7 +1639,7 @@ label.check-s.color-white {
 }
 #scroll_right.ban_fixed {
     position: fixed;
-    top: 20px;
+    top: 50px;
     right: 50%;
     margin-right: -913px;
 }

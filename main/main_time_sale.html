@@ -78,10 +78,6 @@
 <!--{ / }-->
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.btn_goods_view_down_more').on('click', function(e){
-            gd_get_list($(this).data('page'));
-        });
-
         $('form[name=frmList] select[name=pageNum]').change(function() {
             $('form[name=frmList]').get(0).submit();
         });
@@ -103,11 +99,6 @@
 
         $.get('../event/time_sale.php', {'mode' : 'get_more', 'more' : page, 'sno' : '{timeSaleInfo.sno}', 'sort' : '{sort}'}, function (data) {
             $(".goods_list_cont").html(data);
-            if (parseInt(page) + 1 > totalPage) {
-                $('.btn_goods_view_down_more').hide();
-            } else {
-                $('.btn_goods_view_down_more').data('page', parseInt(page) + 1);
-            }
         });
     }
 

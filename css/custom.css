@@ -2771,6 +2771,9 @@ body {
 .main_sec03 .goods_list_cont ul li {
     flex: 1;
 }
+.main_sec03 .goods_list_cont ul li:nth-child(odd) .p_thumb {
+    margin-top: 80px;
+}
 .main_sec03 .swiper01 {
     width: unset !important;
     float: unset !important;
