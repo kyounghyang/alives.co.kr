@@ -74,10 +74,10 @@
 	<div class="board_zone_cont">
 		<div class="board_zone_list">
 			<!--{ ? bdList.list }-->
-			<div class="board_list_gallery">
+			<div class="board_list_review">
 				<ul>
 					<!--{ @ bdList.list }-->
-					<li style="width:{100/bdList.cfg.bdListColsCount}%">
+					<li>
 						<div class="gallery_cont">
 							<div class="board_img">
 								<a href="javascript:gd_btn_view('{req.bdId}',{.sno} , '{.auth.view}')">
@@ -85,13 +85,6 @@
 								</a>
 							</div>
 							<div class="gallery_info_cont">
-								<!--{ ? bdList.cfg.bdGoodsPtFl == 'y' }-->
-								<div class="rating_star_box">
-									<span class="rating_star">
-										<span style="width:{.goodsPtPer}%;">{=__('별 다섯개중 다섯개')}</span>
-									</span>
-								</div>
-								<!--{/}-->
 
 								<div class="board_tit">
 									<!--{ ? bdList.cfg.bdCategoryFl == 'y'}--><em>[{.category}]</em><!--{/}-->
@@ -118,17 +111,16 @@
 									<img src="{bdList.cfg.iconImage.hot.url}" alt="{=__('인기글')}"/>
 									<!--{/}-->
 								</div>
+								<div class="re_line"></div>
+								<div class="re_count">
+									<span>{.writer}</span>
+									<span class="bar"></span>
+									<span>{.regDate}</span>
+									<span class="bar"></span>
+									<span>{.hit}</span>
+									<span class="count"><img src="../../../img/star/re_star0{.goodsPt}.png"></span>
+								</div>
 
-								<div class="board_name_day">
-									<span class="board_name">{.writer}</span>
-									<span class="board_day"><span>{.regDate}</span></span>
-								</div>
-								<div class="board_likeit_hits">
-									<!--{ ? bdList.cfg.bdRecommendFl == 'y'}-->
-									<span class="board_likeit">{=__('추천')}  {.recommend}</span>
-									<!--{/}-->
-									<span class="board_hits"><!--{ ? bdList.cfg.bdPcHitFl == 'y'}-->{=__('조회')} {.hit}<!--{/}--></span>
-								</div>
 							</div>
 							<!-- //gallery_info_cont -->
 						</div>
