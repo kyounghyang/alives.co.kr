@@ -5,9 +5,20 @@
 </div>
 <!--{/}-->
 <div class="board_zone_sec">
+
+
 	<!--{? !inList }-->
-	<div class="board_zone_tit">
-		<h2>{=__(bdList.cfg.bdNm)}</h2>
+	<div class="vimeo_top">
+		<div class="title">
+			<h1>MOVIE</h1>
+			<h4>{=__(bdList.cfg.bdNm)}</h4>
+		</div>
+		<div class="top_menu">
+			<ul>
+				<li><a href="/board/list.php?bdId=movie" class="button <!--{?req.bdId == 'movie'}-->over<!--{ / }-->">사용밥법</a></li>
+				<li><a href="/board/list.php?bdId=movie2" class="button <!--{?req.bdId == 'movie2'}-->over<!--{ / }-->">다양한 영상</a></li>
+			</ul>			
+		</div>
 	</div>
 	<!--{/}-->
 	<div class="board_zone_cont">

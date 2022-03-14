@@ -2263,7 +2263,7 @@ body {
     overflow: hidden;
     padding: 0;
     background-color: #323232;
-    width: 1720px;
+    width: 100%;
     margin: 0 auto;
 }
 #footer_wrap {
@@ -2800,22 +2800,13 @@ body {
     width: 100%;
 }
 @media screen and (max-width: 1919px) {
-    #footer {
-        width: 1720px;
-    }
 }
 @media screen and (max-width: 1699px) {
     .main_grid4 ul li {
         width: 330px;
     }
-    #footer {
-        width: 1470px;
-    }
 }
 @media screen and (max-width: 1499px) {
-    #footer {
-        width: 1380px;
-    }
 }
 
 .item_photo_box {
