@@ -1788,11 +1788,40 @@
 
     <!-- 상품상세 -->
     <div class="item_goods_sec">
+
+		<!-- 관련상품 영역 시작 -->
+		<div id="title_03" class="cboth pdt100"></div>
+		<ul class="cboth title_detail">
+			<li class="selected"><a href="#title_03">관련상품</a></li>
+			<li><a href="#title_01">상세정보</a></li>
+			<li><a href="#title_02">배송/교환/상품</a></li>
+			<li><a href="#title_04">상품후기</a></li>
+			<li><a href="#title_05">상품Q&A</a></li>
+		</ul><!-- //title_detail -->
+
+		<div id="relation" class="detail_explain_box">
+			<div class="rel_title01">YOU MAY ALSO LIKE</div>
+			<div class="rel_title02">이 상품을 구매하신 분들이 함께 본 상품입니다.</div>
+			
+			<!--{ ? relation.relationFl != 'n' }-->
+			<div class="goods_list">
+				<div class="goods_list_cont">
+					<!--{ ? widgetGoodsList }-->
+					<!-- 추천상품 -->
+					{=includeWidget('goods/_goods_display.html')}
+					<!-- 추천상품 -->
+					<!--{ / }-->
+				</div>
+			</div>
+			<!--{ / }-->
+		</div><!-- relation -->
+
+
 		<div id="title_01" class="cboth pdt100"></div>
 		<ul class="cboth title_detail">
+			<li><a href="#title_03">관련상품</a></li>
 			<li class="selected"><a href="#title_01">상세정보</a></li>
 			<li><a href="#title_02">배송/교환/상품</a></li>
-			<li><a href="#title_03">관련상품</a></li>
 			<li><a href="#title_04">상품후기</a></li>
 			<li><a href="#title_05">상품Q&A</a></li>
 		</ul><!-- //title_detail -->
@@ -1845,9 +1874,9 @@
 		<!-- 배송/교환/상품 영역 시작 -->
 		<div id="title_02" class="cboth pdt100"></div>
 		<ul class="cboth title_detail">
+			<li><a href="#title_03">관련상품</a></li>
 			<li><a href="#title_01">상세정보</a></li>
 			<li class="selected"><a href="#title_02">배송/교환/상품</a></li>
-			<li><a href="#title_03">관련상품</a></li>
 			<li><a href="#title_04">상품후기</a></li>
 			<li><a href="#title_05">상품Q&A</a></li>
 		</ul><!-- //title_detail -->
@@ -1883,41 +1912,15 @@
         </div><!-- // delivery -->
 
 		
-		<!-- 관련상품 영역 시작 -->
-		<div id="title_03" class="cboth pdt100"></div>
-		<ul class="cboth title_detail">
-			<li><a href="#title_01">상세정보</a></li>
-			<li><a href="#title_02">배송/교환/상품</a></li>
-			<li class="selected"><a href="#title_03">관련상품</a></li>
-			<li><a href="#title_04">상품후기</a></li>
-			<li><a href="#title_05">상품Q&A</a></li>
-		</ul><!-- //title_detail -->
-
-		<div id="relation" class="detail_explain_box">
-			<div class="rel_title01">YOU MAY ALSO LIKE</div>
-			<div class="rel_title02">이 상품을 구매하신 분들이 함께 본 상품입니다.</div>
-			
-			<!--{ ? relation.relationFl != 'n' }-->
-			<div class="goods_list">
-				<div class="goods_list_cont">
-					<!--{ ? widgetGoodsList }-->
-					<!-- 추천상품 -->
-					{=includeWidget('goods/_goods_display.html')}
-					<!-- 추천상품 -->
-					<!--{ / }-->
-				</div>
-			</div>
-			<!--{ / }-->
-		</div><!-- relation -->
 
 
 		<!-- 후기 영역 시작 -->
 		<div id="title_4" class="cboth" style="position:relative;top:-96px;"></div>
 		<div id="title_04" class="cboth pdt100"></div>
 		<ul class="cboth title_detail">
+			<li><a href="#title_03">관련상품</a></li>
 			<li><a href="#title_01">상세정보</a></li>
 			<li><a href="#title_02">배송/교환/상품</a></li>
-			<li><a href="#title_03">관련상품</a></li>
 			<li class="selected"><a href="#title_04">상품후기</a></li>
 			<li><a href="#title_05">상품Q&A</a></li>
 		</ul><!-- //title_detail -->
@@ -1946,9 +1949,9 @@
 		<div id="title_5" class="cboth" style="position:relative;top:-96px;"></div>
 		<div id="title_05" class="cboth pdt100"></div>
 		<ul class="cboth title_detail">
+			<li><a href="#title_03">관련상품</a></li>
 			<li><a href="#title_01">상세정보</a></li>
 			<li><a href="#title_02">배송/교환/상품</a></li>
-			<li><a href="#title_03">관련상품</a></li>
 			<li><a href="#title_04">상품후기</a></li>
 			<li class="selected"><a href="#title_05">상품Q&A</a></li>
 		</ul><!-- //title_detail -->
