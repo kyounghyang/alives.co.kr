@@ -1979,9 +1979,7 @@ body {
     color: #222;
     font-weight: normal;
 }
-.pagination li.on span {
-    border-radius: 0;
-}
+
 .pagination li.on:hover {
     text-decoration: none;
 }
