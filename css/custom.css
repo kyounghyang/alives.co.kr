@@ -376,7 +376,7 @@ body {
     top: 0px;
     left: 0%;
     right: 0%;
-    z-index: 1000;
+    z-index: 199;
     background-color: #fff;
     border-bottom: 1px solid #ebebeb !important;
 }
