@@ -2,10 +2,10 @@
 <div class="sub_menu_box">
     <h2>{=__('고객센터')}</h2>
     <ul class="sub_menu">
-        <!--{?canNotice}--><li><a href="../service/notice.php">{=__('공지사항')}</a></li><!--{/}-->
-        <!--{?canQa}--><li><a href="../service/qa.php">1:1{=__('문의하기')}</a></li><!--{/}-->
-        <li><a href="/board/list.php?bdId=goodsqa">{=__('문의확인')}</a></li>
-        <li><a href="../service/faq.php">FAQ</a></li>
+        <!--{?canNotice}--><li><a href="/service/notice.php">{=__('공지사항')}</a></li><!--{/}-->
+        <!--{?canQa}--><li><a href="/service/qa.php">1:1{=__('문의하기')}</a></li><!--{/}-->
+        <li><a href="/service/qa.php?mode=list">{=__('문의확인')}</a></li>
+        <li><a href="/service/faq.php">FAQ</a></li>
     </ul>
 </div>
 <!-- //sub_menu_box -->
@@ -35,5 +35,5 @@
 <!-- //info_box -->
 <script type="text/javascript">
     // 메뉴 선택
-    $('.sub_menu li > a[href*="' + document.location.pathname + '"]').addClass('active');
+    $('.sub_menu li > a[href="' + (document.location.pathname + document.location.search) + '"]').addClass('active');
 </script>
