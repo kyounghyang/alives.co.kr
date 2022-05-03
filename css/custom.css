@@ -934,14 +934,14 @@ body {
 #mobile_allcate .nav_t02 {
     padding-top: 27px;
 }
+#mobile_allcate .nav_t02 ul {
+    display:flex;
+    gap:20px;
+}
 #mobile_allcate .nav_t02 ul li {
-    float: right;
     width: 165px;
     height: 46px;
     border: 1px solid #151515;
-}
-#mobile_allcate .nav_t02 ul li:first-child {
-    float: left;
 }
 #mobile_allcate .nav_t02 ul li:first-child a {
     background-color: #151515;
