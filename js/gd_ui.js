@@ -463,10 +463,12 @@ function gd_center_layer(){
         // @qnibus 레이어 안에 레이어가 있는 경우 종속된 보이지 않는 레이어가 이미 떠있는 레이어 기준으로 center 처리 되어 보여져 레이아웃이 깨짐
         $('.layer_wrap').removeAttr('style');
         $('body').css('overflow','hidden');
-        // var target = $(this).attr('href');
-        // $(target).removeClass('dn');
-        $('#layerDim').removeClass('dn');
-        //$(target).find('> div').center();
+        var target = $(this).attr('href');
+        if(target.indexOf('#')===0){
+            $(target).removeClass('dn');
+            $('#layerDim').removeClass('dn');
+            $(target).find('> div').center();
+        }
 
         return false;
     });
