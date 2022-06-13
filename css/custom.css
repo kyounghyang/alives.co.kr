@@ -717,6 +717,7 @@ body {
     height:100%;
     position: absolute;
     background-color: #c5bdb7;
+    border-top: 1px solid #EBEBEB;
     top: 97px;
 }
 
@@ -741,40 +742,41 @@ body {
 #header .gnb .depth0 > li {
     position: relative;
     display: inline-block;
-    width: 100px;
+    width: 113px;
     vertical-align: top;
     margin-top: 30px;
+
 }
-#header .gnb .depth0 > li > a {
+#header .gnb .depth0 > li > a > span {
     height: 48px;
     line-height: 48px;
     color: #89786d;
     font-family: "Montserrat", "Nanum Gothic", sans-serif;
-    font-weight: 400;
-    margin: 10px 15px 10px 15px;
-    padding: 0;
-    font-size: 13px;
+
+    margin: 10px 0;
+    padding: 0 10px;
+    font-size: 16px;
     display: block;
+    position: relative;
 }
-#header .gnb .depth0 > li:hover > a:after {
+#header .gnb .depth0 > li:hover > a > span:after {
     width: 100%;
     left: 0;
 }
 
-#header .gnb .depth0 > li > a:after {
+#header .gnb .depth0 > li > a > span:after {
     content: "";
     position: absolute;
-    top:52px;
-    right: 0;
+    top: 47px;
     bottom: 38px;
     width: 0;
-    height: 1px;
+    height: 2px;
     background: #89786d;
-    -khtml-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;    
+    -khtml-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;    
 }
 #header .gnb .depth0 > li > a > img {
     max-height: 58px;
@@ -830,20 +832,24 @@ body {
 #header .gnb .depth2 {
     position: static;
     box-sizing: border-box;
-    width: 100px;
+    width: unset !important;
     border: unset !important;
     background-color: unset;
+    padding-bottom: 20px;
 }
 #header .gnb .depth2 li a {
     display: block;
-    padding: 5px 10px 7px 19px;
-    font-size: 12px;
+    padding: 10px 10px 7px 35px;
+    font-size: 14px;
+    color: #eae6e3;
     text-align: left;
-    color: white;
-    font-family: "Montserrat", "Nanum Gothic", sans-serif;
+    /*font-family: "Montserrat", "Nanum Gothic", sans-serif;*/
 }
 #header .gnb .depth2 li a:hover {
     text-decoration: underline;
+   font-weight: bold;
+    /* font-weight: 400;*/
+    color:floralwhite;
 }
 
 #header .gnb .depth2 li a.active {
