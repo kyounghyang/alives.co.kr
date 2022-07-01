@@ -1,3 +1,11 @@
+//ie 접속시 edge로 이동
+if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+window.location = 'microsoft-edge:' + window.location;
+setTimeout(function() {
+	window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+}, 1);
+}
+
 jQuery(document).ready(function () {
 
 	/* morenvy.com ���ν����̵� */
